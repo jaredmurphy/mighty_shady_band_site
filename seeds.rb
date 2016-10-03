@@ -43,7 +43,9 @@ venues
 #Nevada
 "6th Street Pub",
 # Dubuque
-"The Lift"
+"The Lift",
+# Chicago
+"John Barleycorn"
 
 
 
@@ -57,12 +59,15 @@ festivals
 "Shagstock",
 "Dangerfest",
 "8035",
+"Little Big Fest"
 "Wakarusa",
 "Love Fest in the Midwest"
 
 # radio and television
 "KCWI Great Day Morning Show",
 "IPR Studio One",
+"The Ron Sorenson Show - Des Moines 98.9 FM KFMG",
+"KFMG Homegrown - Des Moines 98.9 FM KFMG",
 "IPR Java Blend"
 
 # Accolades

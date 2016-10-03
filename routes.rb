@@ -1,9 +1,19 @@
 class MightyShady < Sinatra::Base
   get "/" do
-    erb :"index"
+    erb :index
   end
 
-  get "/about" do
-    erb :"about"
+  get "/band" do
+    erb :band
+  end
+
+  get "/musicians/:id" do
+    @musician = "Eric McCoy"
+    erb :musician
+  end
+
+  get "/band/eric" do
+    @musician = "Eric Mccoy"
+    erb :index
   end
 end
