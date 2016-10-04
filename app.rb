@@ -4,6 +4,7 @@ require "sinatra/namespace"
 require "sinatra/reloader"
 require "pg"
 require "pony"
+require "httparty"
 
 require_relative "routes.rb"
 

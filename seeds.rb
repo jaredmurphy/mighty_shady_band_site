@@ -51,9 +51,9 @@ conn.exec(
   conn.exec("INSERT INTO pictures (img_url, caption, year)
   VALUES ('http://i.imgur.com/qeKH6Fk.jpg', 'Introducing are new bass player, Rooney!', 2015)"
   )
-  conn.exec("INSERT INTO pictures (img_url, caption, year)
-  VALUES ('http://i.imgur.com/bt1U4xw.jpg', 'Writing in the basement', 2015)"
-  )
+  # conn.exec("INSERT INTO pictures (img_url, caption, year)
+  # VALUES ('http://i.imgur.com/bt1U4xw.jpg', 'Writing in the basement', 2015)"
+  # )
   conn.exec("INSERT INTO pictures (img_url, caption, year)
   VALUES ('http://i.imgur.com/W5Rmf7c.jpg', 'Guitars and Highlife', 2015)"
   )
@@ -78,9 +78,9 @@ conn.exec(
   conn.exec("INSERT INTO pictures (img_url, caption, year)
   VALUES ('http://i.imgur.com/CR4D9bs.jpg', 'Woolys', 2014)"
   )
-  conn.exec("INSERT INTO pictures (img_url, caption, year)
-  VALUES ('http://i.imgur.com/xYJFHPG.jpg', 'Setting up lights at the Iowa City Yacht Club', 2014)"
-  )
+  # conn.exec("INSERT INTO pictures (img_url, caption, year)
+  # VALUES ('http://i.imgur.com/xYJFHPG.jpg', 'Setting up lights at the Iowa City Yacht Club', 2014)"
+  # )
   conn.exec("INSERT INTO pictures (img_url, caption, year)
   VALUES ('http://i.imgur.com/hL1n2XA.jpg', 'DGs Taphouse', 2014)"
   )
@@ -180,9 +180,9 @@ conn.exec(
   conn.exec("INSERT INTO pictures (img_url, caption, year)
   VALUES ('http://i.imgur.com/mrA4vEb.jpg', 'On the road to Rochester', 2013)"
   )
-  conn.exec("INSERT INTO pictures (img_url, caption, year)
-  VALUES ('http://i.imgur.com/ez6OnIW.jpg', 'NYE sound check', 2015)"
-  )
+  # conn.exec("INSERT INTO pictures (img_url, caption, year)
+  # VALUES ('http://i.imgur.com/ez6OnIW.jpg', 'NYE sound check', 2015)"
+  # )
   conn.exec("INSERT INTO pictures (img_url, caption, year)
   VALUES ('http://i.imgur.com/GcQ8Ubm.jpg', '2nd EP ready to release!', 2013)"
   )

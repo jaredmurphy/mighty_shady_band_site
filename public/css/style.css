@@ -85,7 +85,7 @@ a {
 }
 
 .tabs .indicator {
-  background-color: black;
+  background-color: white;
 }
 
 #video {
@@ -101,4 +101,17 @@ a {
   float: none;
   background-color: rgba(0, 0, 0, 0.55);
   color: white;
+}
+
+
+.button_padding_left {
+  padding-left: 30px;
+}
+
+.tour_pic {
+  max-height: 120px;
+}
+.center {
+  margin: 0 auto;
+  text-align: center;
 }

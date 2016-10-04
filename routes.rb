@@ -7,9 +7,9 @@ class MightyShady < Sinatra::Base
     erb :band
   end
 
-  get "/band/eric" do
+  get "/band/:musician" do
     @musician = "Eric Mccoy"
-    erb :index
+    erb :musician
   end
 
   get "/music" do
@@ -29,16 +29,26 @@ class MightyShady < Sinatra::Base
     erb :blog
   end
 
+  get "/tour" do
+    dates = HTTParty.get(ENV["BIT_EVENTS"])
+    @tour_dates = dates.sort_by { |event| event["datetime"]  }
+    erb :tour
+  end
+
+  get "/social" do
+    erb :social
+  end
+
   get "/contact" do
     erb :contact
   end
 
   post "/email" do
-    Pony.mail(
+    email = Pony.mail(
       :from => params[:name] + "<" + params[:email] + ">",
       :to => ENV['MIGHTY_SHADY_EMAIL'],
-      :subject => params[:name] + " has contacted you",
-      :body => params[:message],
+      :subject => "#{params[:name]} has contacted you - #{params[:option].upcase}",
+      :body => "#{params[:message]} \nsent by #{params[:email]}",
       # :port => '587',
       :via => :smtp,
       :via_options => {
@@ -50,7 +60,7 @@ class MightyShady < Sinatra::Base
         # :authentication       => :plain,
         :domain               => 'localhost.localdomain'
       })
-    redirect "/"
+    erb :successful_contact
   end
 
   private
