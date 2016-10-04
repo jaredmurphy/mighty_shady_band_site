@@ -2,6 +2,7 @@ require "pry"
 require "sinatra"
 require "sinatra/namespace"
 require "sinatra/reloader"
+require "pg"
 
 require_relative "routes.rb"
 

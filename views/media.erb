@@ -1,0 +1,23 @@
+<br/>
+<div class="row">
+    <div class="col s12">
+      <ul class="tabs">
+        <li class="tab dark_card col s3"><a class="active" href="#images">Images</a></li>
+        <li class="tab dark_card col s3"><a href="#video">Video</a></li>
+      </ul>
+    </div>
+    <div id="images" class="masonry col s12">
+      <% @images.each do |image| %>
+         <img id="image_<%=image['id']%>" class="media_images materialboxed" data-caption="<%=image['caption']%> - <%=image['year']%>"
+         src=<%= image['img_url']%> />
+      <% end %>
+    </div>
+
+    <div id="video" class="col s12">
+      <% @videos.each do |video| %>
+        <div class="video-container">
+          <iframe width="853" height="480" src=<%="https://www.youtube.com/embed/#{video['youtube_id']}"%> frameborder="0" allowfullscreen></iframe>
+        </div>
+      <% end %>
+    </div>
+</div>
