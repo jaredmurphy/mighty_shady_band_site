@@ -29,6 +29,30 @@ class MightyShady < Sinatra::Base
     erb :blog
   end
 
+  get "/contact" do
+    erb :contact
+  end
+
+  post "/email" do
+    Pony.mail(
+      :from => params[:name] + "<" + params[:email] + ">",
+      :to => ENV['MIGHTY_SHADY_EMAIL'],
+      :subject => params[:name] + " has contacted you",
+      :body => params[:message],
+      # :port => '587',
+      :via => :smtp,
+      :via_options => {
+        :address              => 'smtp.gmail.com',
+        :port                 => '587',
+        :enable_starttls_auto => true,
+        :user_name            => ENV['MIGHTY_SHADY_EMAIL_USERNAME'],
+        :password             => ENV['MIGHTY_SHADY_EMAIL_PASSWORD'],
+        # :authentication       => :plain,
+        :domain               => 'localhost.localdomain'
+      })
+    redirect "/"
+  end
+
   private
 
     def conn

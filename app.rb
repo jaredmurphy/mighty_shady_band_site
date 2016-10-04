@@ -3,6 +3,7 @@ require "sinatra"
 require "sinatra/namespace"
 require "sinatra/reloader"
 require "pg"
+require "pony"
 
 require_relative "routes.rb"
 

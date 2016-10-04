@@ -95,3 +95,10 @@ a {
 .video-container {
   margin-top: 50px;
 }
+
+#contact-form {
+  margin: 50px auto;
+  float: none;
+  background-color: rgba(0, 0, 0, 0.55);
+  color: white;
+}
